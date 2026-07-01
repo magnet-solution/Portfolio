@@ -1,5 +1,6 @@
 import React from 'react';
 import { Monitor, ShoppingBag, Code2, CalendarRange, Sparkles, Settings } from 'lucide-react';
+import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 export default function Services() {
   const services = [
@@ -62,14 +63,14 @@ export default function Services() {
       </div>
 
       {/* 3x2 Grid with Collapsed Borders Logic */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-ink bg-paper">
+      <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-ink bg-paper">
         {services.map((svc) => {
           const IconComponent = svc.icon;
           return (
-            <div
-              key={svc.num}
-              className="border-r border-b border-ink p-8 hover:bg-neutral-50 transition-colors duration-200 flex flex-col justify-between group"
-            >
+            <StaggerItem key={svc.num}>
+              <div
+                className="border-r border-b border-ink p-8 hover:bg-neutral-50 transition-colors duration-200 flex flex-col justify-between group"
+              >
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <div className={`w-12 h-12 border border-ink flex items-center justify-center transition-all duration-300 bg-paper group-hover:shadow-hard group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 ${svc.color}`}>
@@ -93,10 +94,11 @@ export default function Services() {
                 <span>REPLY TIME: 24H</span>
                 <span className="font-bold">➔ GET QUOTE</span>
               </div>
-            </div>
+              </div>
+            </StaggerItem>
           );
         })}
-      </div>
+        </StaggerContainer>
     </section>
   );
 }

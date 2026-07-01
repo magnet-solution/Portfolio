@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
+import { AnimateSection } from './AnimateSection';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -35,8 +36,8 @@ export default function FAQ() {
     <section id="faq" className="max-w-screen-xl mx-auto px-4 py-16 border-b border-ink">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left Column: Heading */}
-        <div className="lg:col-span-5">
-          <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
+        <AnimateSection className="lg:col-span-5" variant="slideLeft">
+        <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
             [ SECTION 09: FREQUENT DISCLOSURES ]
           </span>
           <h3 className="font-serif font-black text-4xl md:text-5xl uppercase tracking-tight text-ink">
@@ -45,10 +46,10 @@ export default function FAQ() {
           <p className="font-body text-neutral-600 mt-4 leading-relaxed">
             Quick responses to common developer-client queries. If you have any other questions, please contact our team directly using the form below.
           </p>
-        </div>
+        </AnimateSection>
 
         {/* Right Column: Accordions with transition-all grid-rows */}
-        <div className="lg:col-span-7 border-t border-ink">
+        <AnimateSection className="lg:col-span-7 border-t border-ink" variant="slideRight" delay={0.1}>
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
@@ -83,7 +84,7 @@ export default function FAQ() {
               </div>
             );
           })}
-        </div>
+        </AnimateSection>
       </div>
     </section>
   );

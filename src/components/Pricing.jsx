@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, Info, Star } from 'lucide-react';
+import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 export default function Pricing() {
   const tiers = [
@@ -60,22 +61,24 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="max-w-screen-xl mx-auto px-4 py-16 border-b border-ink">
-      <div className="mb-12">
-        <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
-          [ SECTION 06: EXPLICIT PRICING SHEETS ]
-        </span>
-        <h3 className="font-serif font-black text-4xl md:text-5xl uppercase tracking-tight text-ink">
-          BUDGET ESTIMATES
-        </h3>
-        <p className="font-body text-neutral-600 mt-2 max-w-xl">
-          Fixed packages tailored to your objectives. No hidden fees, no unnecessary subscriptions.
-        </p>
-      </div>
+      <AnimateSection>
+        <div className="mb-12">
+          <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
+            [ SECTION 06: EXPLICIT PRICING SHEETS ]
+          </span>
+          <h3 className="font-serif font-black text-4xl md:text-5xl uppercase tracking-tight text-ink">
+            BUDGET ESTIMATES
+          </h3>
+          <p className="font-body text-neutral-600 mt-2 max-w-xl">
+            Fixed packages tailored to your objectives. No hidden fees, no unnecessary subscriptions.
+          </p>
+        </div>
+      </AnimateSection>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-12">
+      <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-12">
         {tiers.map((tier) => (
+          <StaggerItem key={tier.name}>
           <div
-            key={tier.name}
             className={`border-2 ${
               tier.isPopular ? 'border-editorial-red bg-cream scale-105 shadow-hard' : 'border-ink bg-paper'
             } p-8 flex flex-col justify-between relative transition-all duration-200 hover:shadow-hard`}
@@ -127,9 +130,11 @@ export default function Pricing() {
               {tier.cta}
             </a>
           </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
 
+      <AnimateSection delay={0.1}>
       {/* Maintenance Tier Box */}
       <div className="border-2 border-ink bg-paper p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-hard transition-all duration-200">
         <div className="flex items-center gap-4">
@@ -152,6 +157,7 @@ export default function Pricing() {
           Inquire Maintenance
         </a>
       </div>
+      </AnimateSection>
     </section>
   );
 }

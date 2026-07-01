@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 export default function Testimonials() {
   const reviews = [
@@ -44,10 +45,10 @@ export default function Testimonials() {
       </div>
 
       {/* Row of quotes styled like letters to the editor */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {reviews.map((rev, index) => (
+          <StaggerItem key={rev.name}>
           <div
-            key={rev.name}
             className="border-2 border-ink bg-paper p-6 relative flex flex-col justify-between hover:shadow-hard hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200"
           >
             {/* Quote Icon Background */}
@@ -84,8 +85,9 @@ export default function Testimonials() {
               </div>
             </div>
           </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }

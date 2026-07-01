@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Zap, HeartHandshake, Compass } from 'lucide-react';
+import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 export default function About() {
   const values = [
@@ -37,7 +38,7 @@ export default function About() {
     <section id="about" className="max-w-screen-xl mx-auto px-4 py-16 border-b border-ink">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left Column: The Editorial Story */}
-        <div className="lg:col-span-6 flex flex-col justify-between">
+        <AnimateSection className="lg:col-span-6 flex flex-col justify-between" variant="slideLeft">
           <div>
             <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
               [ SECTION 02: THE LEAD STORY ]
@@ -61,15 +62,15 @@ export default function About() {
             <div>WRITTEN BY: EDITORIAL BOARD</div>
             <div>KEYWORDS: REVENUE, TECH, LOCAL</div>
           </div>
-        </div>
+        </AnimateSection>
 
         {/* Right Column: Values Grid */}
-        <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <StaggerContainer className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {values.map((val) => {
             const IconComponent = val.icon;
             return (
-              <div 
-                key={val.title}
+            <StaggerItem key={val.title}>
+              <div
                 className={`border-2 border-ink p-6 bg-paper flex flex-col justify-between transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-hard`}
               >
                 <div>
@@ -90,9 +91,10 @@ export default function About() {
                   Value Code: 0{values.indexOf(val) + 1} // CARAGA
                 </div>
               </div>
+            </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessagesSquare, Compass, Braces, Rocket, HeartHandshake } from 'lucide-react';
+import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 export default function Process() {
   const steps = [
@@ -56,38 +57,37 @@ export default function Process() {
         </div>
 
         {/* 5-Column Grid with White Collapsed Borders in Dark Mode */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-neutral-700 bg-ink">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-neutral-700 bg-ink">
           {steps.map((st) => {
             const IconComponent = st.icon;
             return (
-              <div
-                key={st.step}
-                className="border-r border-b border-neutral-700 p-8 flex flex-col justify-between hover:bg-neutral-900 transition-colors duration-200"
-              >
-                <div>
-                  <div className="flex justify-between items-start mb-6">
-                    <span className="font-mono text-3xl font-black text-editorial-red tracking-widest">
-                      {st.step}
-                    </span>
-                    <IconComponent className={`h-6 w-6 ${st.color}`} strokeWidth={1.5} />
+              <StaggerItem key={st.step}>
+                <div className="border-r border-b border-neutral-700 p-8 flex flex-col justify-between hover:bg-neutral-900 transition-colors duration-200">
+                  <div>
+                    <div className="flex justify-between items-start mb-6">
+                      <span className="font-mono text-3xl font-black text-editorial-red tracking-widest">
+                        {st.step}
+                      </span>
+                      <IconComponent className={`h-6 w-6 ${st.color}`} strokeWidth={1.5} />
+                    </div>
+
+                    <h4 className="font-sans font-black text-xl text-paper uppercase tracking-wide mb-3">
+                      {st.title}
+                    </h4>
+
+                    <p className="font-body text-xs md:text-sm text-neutral-400 leading-relaxed">
+                      {st.description}
+                    </p>
                   </div>
 
-                  <h4 className="font-sans font-black text-xl text-paper uppercase tracking-wide mb-3">
-                    {st.title}
-                  </h4>
-
-                  <p className="font-body text-xs md:text-sm text-neutral-400 leading-relaxed">
-                    {st.description}
-                  </p>
+                  <div className="mt-8 pt-4 border-t border-dashed border-neutral-800 font-mono text-[9px] text-neutral-500 tracking-wider">
+                    STATUS: SECURE ➔ READY
+                  </div>
                 </div>
-
-                <div className="mt-8 pt-4 border-t border-dashed border-neutral-800 font-mono text-[9px] text-neutral-500 tracking-wider">
-                  STATUS: SECURE ➔ READY
-                </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

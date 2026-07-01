@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, Code } from 'lucide-react';
+import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -70,7 +71,8 @@ export default function Projects() {
 
   return (
     <section id="projects" className="max-w-screen-xl mx-auto px-4 py-16 border-b border-ink">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <AnimateSection>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
           <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
             [ SECTION 05: RECENT EXPORT PORTFOLIO ]
@@ -100,12 +102,13 @@ export default function Projects() {
           ))}
         </div>
       </div>
+    </AnimateSection>
 
       {/* Grid of Projects */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => (
+          <StaggerItem key={project.id}>
           <div
-            key={project.id}
             className="border-2 border-ink bg-paper p-5 relative flex flex-col justify-between hover:shadow-hard transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1"
           >
             <div>
@@ -191,8 +194,9 @@ export default function Projects() {
               </div>
             </div>
           </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }

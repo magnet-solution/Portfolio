@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Send } from 'lucide-react';
+import { AnimateSection } from './AnimateSection';
 
 export default function Hero() {
   return (
@@ -7,45 +8,57 @@ export default function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Side: Editorial Typography & Copy */}
         <div className="lg:col-span-7 flex flex-col justify-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-editorial-pink text-ink border border-ink text-xs font-mono uppercase tracking-widest mb-6 w-fit self-start btn-bounce hover:scale-105">
-            <Sparkles className="h-3 w-3 text-ink" />
-            Special Bulletin: Caraga Web Developers
-          </div>
+          <AnimateSection delay={0}>
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-editorial-pink text-ink border border-ink text-xs font-mono uppercase tracking-widest mb-6 w-fit self-start btn-bounce hover:scale-105">
+              <Sparkles className="h-3 w-3 text-ink" />
+              Special Bulletin: Caraga Web Developers
+            </div>
+          </AnimateSection>
+
+          <AnimateSection delay={0.1}>
+            <h2 className="font-serif font-black text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tighter text-ink mb-6">
+              We build websites <br className="hidden md:inline"/>
+              &amp; web apps for <br className="hidden md:inline"/>
+              <span className="underline decoration-editorial-red decoration-wavy underline-offset-8">businesses.</span>
+            </h2>
+          </AnimateSection>
           
-          <h2 className="font-serif font-black text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tighter text-ink mb-6">
-            We build websites <br className="hidden md:inline"/>
-            &amp; web apps for <br className="hidden md:inline"/>
-            <span className="underline decoration-editorial-red decoration-wavy underline-offset-8">businesses.</span>
-          </h2>
-          
-          <p className="font-body text-base md:text-xl leading-relaxed text-neutral-800 text-justify-columns max-w-2xl mb-8">
-            <span className="float-left text-7xl font-serif font-black text-editorial-red mr-3 mt-1 leading-[0.8] select-none">W</span>
-            e are a specialized four-person team based in Caraga, Philippines. We forge robust frontend layouts, high-scale database systems, and engaging interactive templates. Our products are sharp, lightning-fast, and custom-tuned to boost your business revenue. No shortcuts, just pure digital craftsmanship.
-          </p>
+          <AnimateSection delay={0.2}>
+            <p className="font-body text-base md:text-xl leading-relaxed text-neutral-800 text-justify-columns max-w-2xl mb-8">
+              <span className="float-left text-7xl font-serif font-black text-editorial-red mr-3 mt-1 leading-[0.8] select-none">Y</span>
+              our customers are always online. Your business should be too. We are a specialized four-person team based in Caraga, Philippines — forging robust frontend layouts, high-scale database systems, and engaging interactive templates. Sharp, lightning-fast, and custom-tuned to grow your revenue.
+            </p>
+          </AnimateSection>
           
           {/* Snappy Candy Buttons with sharp corners */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a
-              href="#projects"
-              className="px-6 py-4 bg-editorial-red text-paper font-sans font-bold text-xs uppercase tracking-widest border-2 border-ink flex items-center justify-center gap-2 group transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-hard select-none active:translate-x-1 active:translate-y-1 active:shadow-none"
-              style={{ boxShadow: '4px 4px 0px 0px #111111' }}
-            >
-              <span>View Our Work</span>
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
-            </a>
-            
-            <a
-              href="#contact"
-              className="px-6 py-4 bg-transparent text-ink font-sans font-bold text-xs uppercase tracking-widest border-2 border-ink flex items-center justify-center gap-2 transition-all duration-200 hover:bg-editorial-yellow hover:-translate-x-1 hover:-translate-y-1 hover:shadow-hard select-none active:translate-x-1 active:translate-y-1 active:shadow-none"
-            >
-              <span>Hire Our Team</span>
-              <Send className="h-4 w-4" strokeWidth={2.5} />
-            </a>
-          </div>
+          <AnimateSection delay={0.3}>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <a
+                href="#projects"
+                className="px-6 py-4 bg-editorial-red text-paper font-sans font-bold text-xs uppercase tracking-widest border-2 border-ink flex items-center justify-center gap-2 group transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-hard select-none active:translate-x-1 active:translate-y-1 active:shadow-none"
+                style={{ boxShadow: '4px 4px 0px 0px #111111' }}
+              >
+                <span>View Our Work</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
+              </a>
+              
+              <a
+                href="#contact"
+                className="px-6 py-4 bg-transparent text-ink font-sans font-bold text-xs uppercase tracking-widest border-2 border-ink flex items-center justify-center gap-2 transition-all duration-200 hover:bg-editorial-yellow hover:-translate-x-1 hover:-translate-y-1 hover:shadow-hard select-none active:translate-x-1 active:translate-y-1 active:shadow-none"
+              >
+                <span>Hire Our Team</span>
+                <Send className="h-4 w-4" strokeWidth={2.5} />
+              </a>
+            </div>
+          </AnimateSection>
         </div>
 
         {/* Right Side: Playful Geometric Frame */}
-        <div className="lg:col-span-5 relative w-full aspect-square md:aspect-[4/3] lg:aspect-square flex items-center justify-center border-2 border-ink bg-paper newsprint-dot-grid p-6 overflow-hidden">
+        <AnimateSection 
+          delay={0.2} 
+          variant="slideRight"
+          className="lg:col-span-5 relative w-full aspect-square md:aspect-[4/3] lg:aspect-square flex items-center justify-center border-2 border-ink bg-paper newsprint-dot-grid p-6 overflow-hidden"
+        >
           {/* Halftone / Dot Grid Frame */}
           <div className="absolute inset-0 halftone-pattern opacity-10 pointer-events-none" />
 
@@ -82,7 +95,7 @@ export default function Hero() {
               Fig 1.1 — Caraga-based developers engineering digital platforms.
             </div>
           </div>
-        </div>
+        </AnimateSection>
       </div>
     </section>
   );
