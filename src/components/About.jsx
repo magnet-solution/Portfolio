@@ -50,7 +50,7 @@ export default function About() {
             <div className="font-body text-neutral-800 text-sm md:text-base leading-relaxed text-justify-columns space-y-4">
               <p>
                 <span className="float-left text-6xl font-serif font-black text-editorial-violet mr-3 mt-1 leading-[0.8] select-none">B</span>
-                orn and operating out of Caraga, Philippines, our agency has one guiding focus: to make corporate-grade web applications and high-converting marketing sites accessible to business owners without requiring high-agency overheads. We believe that your website is your digital storefront, operating 24 hours a day, 365 days a year. It should represent you perfectly.
+                orn and operating out of Magallanes, Agusan del Norte, Caraga, Philippines, our agency has one guiding focus: to make corporate-grade web applications and high-converting marketing sites accessible to business owners without requiring high-agency overheads. We believe that your website is your digital storefront, operating 24 hours a day, 365 days a year. It should represent you perfectly.
               </p>
               <p>
                 As a collective of four engineering and marketing specialists, we combine standard database architecture with robust user interfaces. We work closely with our clients during consultations, ensuring that everything from color palettes to backend code structures matches their business goals and user personas.

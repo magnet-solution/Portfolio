@@ -26,7 +26,7 @@ export default function Hero() {
           <AnimateSection delay={0.2}>
             <p className="font-body text-base md:text-xl leading-relaxed text-neutral-800 text-justify-columns max-w-2xl mb-8">
               <span className="float-left text-7xl font-serif font-black text-editorial-red mr-3 mt-1 leading-[0.8] select-none">Y</span>
-              our customers are always online. Your business should be too. We are a specialized four-person team based in Caraga, Philippines — forging robust frontend layouts, high-scale database systems, and engaging interactive templates. Sharp, lightning-fast, and custom-tuned to grow your revenue.
+              our customers are always online. Your business should be too. We are a specialized four-person team based in Magallanes, Agusan del Norte, Caraga, Philippines — forging robust frontend layouts, high-scale database systems, and engaging interactive templates. Sharp, lightning-fast, and custom-tuned to grow your revenue.
             </p>
           </AnimateSection>
           

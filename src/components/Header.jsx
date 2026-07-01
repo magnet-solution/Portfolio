@@ -34,7 +34,7 @@ export default function Header() {
               LATEST EDITION: VOL 1.0
             </span>
             <span>•</span>
-            <span>AGENCY LOCATION: CARAGA, PHILIPPINES</span>
+            <span>AGENCY LOCATION: MAGALLANES, AGUSAN DEL NORTE, CARAGA</span>
             <span>•</span>
             <span>TECH STATUS: FULL STACK READY (REACT, LARAVEL, DJANGO)</span>
             <span>•</span>
@@ -53,7 +53,7 @@ export default function Header() {
               LATEST EDITION: VOL 1.0
             </span>
             <span>•</span>
-            <span>AGENCY LOCATION: CARAGA, PHILIPPINES</span>
+            <span>AGENCY LOCATION: MAGALLANES, AGUSAN DEL NORTE, CARAGA</span>
             <span>•</span>
             <span>TECH STATUS: FULL STACK READY (REACT, LARAVEL, DJANGO)</span>
             <span>•</span>
@@ -86,7 +86,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <span>PRICE: ₱8,000+</span>
             <span className="hidden sm:inline">|</span>
-            <span className="text-editorial-red font-bold animate-pulse">● LIVE IN CARAGA</span>
+            <span className="text-editorial-red font-bold animate-pulse">● LIVE IN MAGALLANES, CARAGA</span>
           </div>
         </div>
       </header>

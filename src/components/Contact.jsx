@@ -80,7 +80,19 @@ export default function Contact() {
               
               <div className="border border-ink p-4 bg-paper flex flex-col gap-1.5 hover:shadow-hard transition-all duration-200">
                 <span className="text-neutral-500 font-bold">PHYSICAL ADDRESS:</span>
-                <span className="font-bold text-sm">Caraga Region, Philippines</span>
+                <span className="font-bold text-sm">Magallanes, Agusan del Norte, Caraga, Philippines</span>
+              </div>
+
+              {/* Styled Newspaper Editorial Map Card */}
+              <div className="border border-ink p-2 bg-paper hover:shadow-hard transition-all duration-200 group">
+                <iframe
+                  title="Agency Location Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31545.034563833446!2d125.50346067431637!3d9.018974599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301c2db579e0f63%3A0xe5a2ab3fb47b19a3!2sMagallanes%2C%20Agusan%20del%20Norte!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
+                  className="w-full h-44 border border-ink grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>

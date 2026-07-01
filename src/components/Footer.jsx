@@ -15,7 +15,7 @@ export default function Footer() {
             THE BUILDWITHUS GLOBE
           </h2>
           <p className="font-mono text-[10px] sm:text-xs tracking-widest text-neutral-500 uppercase mt-2">
-            VOLUME 1.0 // EDITION NO. 4 // CARAGA REGION, PHILIPPINES
+            VOLUME 1.0 // EDITION NO. 4 // MAGALLANES, AGUSAN DEL NORTE, CARAGA, PHILIPPINES
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export default function Footer() {
               PUBLICATION STATEMENT
             </h4>
             <p className="font-body text-xs md:text-sm text-neutral-600 leading-relaxed text-justify-columns">
-              BuildWithUs operates as a dedicated four-person web engineering agency based in Caraga, Philippines. We reject complex, proprietary CMS systems and generic templates in favor of direct code ownership, clean search engine optimization, and robust visual design structures.
+              BuildWithUs operates as a dedicated four-person web engineering agency based in Magallanes, Agusan del Norte, Caraga, Philippines. We reject complex, proprietary CMS systems and generic templates in favor of direct code ownership, clean search engine optimization, and robust visual design structures.
             </p>
           </div>
 
