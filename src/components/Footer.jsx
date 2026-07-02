@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
 
 export default function Footer() {
@@ -37,14 +38,14 @@ export default function Footer() {
               SECTIONS
             </h4>
             <ul className="grid grid-cols-2 gap-2 font-mono text-xs uppercase tracking-wider">
-              <li><a href="#home" className="hover:text-editorial-red hover:underline">01. Home</a></li>
-              <li><a href="#about" className="hover:text-editorial-red hover:underline">02. About</a></li>
-              <li><a href="#services" className="hover:text-editorial-red hover:underline">03. Services</a></li>
-              <li><a href="#team" className="hover:text-editorial-red hover:underline">04. Team</a></li>
-              <li><a href="#projects" className="hover:text-editorial-red hover:underline">05. Portfolio</a></li>
-              <li><a href="#pricing" className="hover:text-editorial-red hover:underline">06. Pricing</a></li>
-              <li><a href="#process" className="hover:text-editorial-red hover:underline">07. Process</a></li>
-              <li><a href="#faq" className="hover:text-editorial-red hover:underline">08. FAQ</a></li>
+              <li><Link to="/" className="hover:text-editorial-red hover:underline">01. Home</Link></li>
+              <li><Link to="/about" className="hover:text-editorial-red hover:underline">02. About</Link></li>
+              <li><Link to="/services" className="hover:text-editorial-red hover:underline">03. Services</Link></li>
+              <li><Link to="/team" className="hover:text-editorial-red hover:underline">04. Team</Link></li>
+              <li><Link to="/projects" className="hover:text-editorial-red hover:underline">05. Portfolio</Link></li>
+              <li><Link to="/pricing" className="hover:text-editorial-red hover:underline">06. Pricing</Link></li>
+              <li><Link to="/process" className="hover:text-editorial-red hover:underline">07. Process</Link></li>
+              <li><Link to="/faq" className="hover:text-editorial-red hover:underline">08. FAQ</Link></li>
             </ul>
           </div>
 

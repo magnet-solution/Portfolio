@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Globe, Radio } from 'lucide-react';
 
 export default function Header() {
@@ -12,15 +13,15 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Our Team', href: '#team' },
-    { name: 'Portfolio', href: '#projects' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Process', href: '#process' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', to: '/' },
+    { name: 'About Us', to: '/about' },
+    { name: 'Services', to: '/services' },
+    { name: 'Our Team', to: '/team' },
+    { name: 'Portfolio', to: '/projects' },
+    { name: 'Pricing', to: '/pricing' },
+    { name: 'Process', to: '/process' },
+    { name: 'FAQ', to: '/faq' },
+    { name: 'Contact', to: '/contact' },
   ];
 
   return (
@@ -97,13 +98,13 @@ export default function Header() {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center justify-between w-full font-sans text-xs tracking-widest uppercase font-bold">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 className="py-3 px-3 transition-colors duration-200 border-r border-ink hover:text-editorial-red last:border-r-0 h-12 flex items-center justify-center flex-1 text-center"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -124,15 +125,15 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t border-ink bg-paper absolute top-12 left-0 w-full z-50 flex flex-col font-sans text-sm tracking-wider uppercase font-bold">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-4 border-b border-ink hover:bg-neutral-100 hover:text-editorial-red flex items-center justify-between"
               >
                 <span>{link.name}</span>
                 <span className="text-neutral-400">➔</span>
-              </a>
+              </Link>
             ))}
           </div>
         )}

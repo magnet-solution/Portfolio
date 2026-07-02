@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Plus } from 'lucide-react';
 import { AnimateSection } from './AnimateSection';
 
@@ -33,59 +34,67 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="max-w-screen-xl mx-auto px-4 py-16 border-b border-ink">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        {/* Left Column: Heading */}
-        <AnimateSection className="lg:col-span-5" variant="slideLeft">
-        <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
-            [ SECTION 09: FREQUENT DISCLOSURES ]
-          </span>
-          <h3 className="font-serif font-black text-4xl md:text-5xl uppercase tracking-tight text-ink">
-            INQUIRY DESK
-          </h3>
-          <p className="font-body text-neutral-600 mt-4 leading-relaxed">
-            Quick responses to common developer-client queries. If you have any other questions, please contact our team directly using the form below.
-          </p>
-        </AnimateSection>
+    <>
+      <Helmet>
+        <title>FAQ | MagNet Solutions - Web Developer Agusan del Norte</title>
+        <meta name="description" content="Frequently asked questions about MagNet Solutions web development and web design services in Agusan del Norte, Caraga, Philippines. Pricing, timelines, and maintenance." />
+        <meta property="og:title" content="FAQ | MagNet Solutions - Web Developer Agusan del Norte" />
+        <meta property="og:description" content="Frequently asked questions about MagNet Solutions web development and web design services in Agusan del Norte, Caraga, Philippines." />
+      </Helmet>
+      <section id="faq" className="max-w-screen-xl mx-auto px-4 py-16 border-b border-ink">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Left Column: Heading */}
+          <AnimateSection className="lg:col-span-5" variant="slideLeft">
+          <span className="font-mono text-xs tracking-widest uppercase font-bold text-neutral-500 block mb-2">
+              [ SECTION 09: FREQUENT DISCLOSURES ]
+            </span>
+            <h3 className="font-serif font-black text-4xl md:text-5xl uppercase tracking-tight text-ink">
+              INQUIRY DESK
+            </h3>
+            <p className="font-body text-neutral-600 mt-4 leading-relaxed">
+              Quick responses to common developer-client queries. If you have any other questions, please contact our team directly using the form below.
+            </p>
+          </AnimateSection>
 
-        {/* Right Column: Accordions with transition-all grid-rows */}
-        <AnimateSection className="lg:col-span-7 border-t border-ink" variant="slideRight" delay={0.1}>
-          {faqs.map((faq, i) => {
-            const isOpen = openIndex === i;
-            return (
-              <div key={i} className="border-b border-ink">
-                <button
-                  onClick={() => handleToggle(i)}
-                  className="w-full py-5 text-left flex justify-between items-center group select-none font-sans font-bold text-sm md:text-base text-ink uppercase tracking-wide focus:outline-none"
-                  aria-expanded={isOpen}
-                >
-                  <span className="pr-4 leading-snug group-hover:text-editorial-red transition-colors">
-                    {faq.q}
-                  </span>
-                  
-                  {/* Plus Icon container rotating on open */}
-                  <div className={`w-8 h-8 border border-ink flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                    isOpen ? 'rotate-45 bg-editorial-red text-paper' : 'bg-transparent text-ink group-hover:bg-neutral-100'
+          {/* Right Column: Accordions with transition-all grid-rows */}
+          <AnimateSection className="lg:col-span-7 border-t border-ink" variant="slideRight" delay={0.1}>
+            {faqs.map((faq, i) => {
+              const isOpen = openIndex === i;
+              return (
+                <div key={i} className="border-b border-ink">
+                  <button
+                    onClick={() => handleToggle(i)}
+                    className="w-full py-5 text-left flex justify-between items-center group select-none font-sans font-bold text-sm md:text-base text-ink uppercase tracking-wide focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="pr-4 leading-snug group-hover:text-editorial-red transition-colors">
+                      {faq.q}
+                    </span>
+                    
+                    {/* Plus Icon container rotating on open */}
+                    <div className={`w-8 h-8 border border-ink flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      isOpen ? 'rotate-45 bg-editorial-red text-paper' : 'bg-transparent text-ink group-hover:bg-neutral-100'
+                    }`}>
+                      <Plus className="h-4 w-4" strokeWidth={2.5} />
+                    </div>
+                  </button>
+
+                  {/* Buttery-smooth expanding CSS grid row */}
+                  <div className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100 mb-5' : 'grid-rows-[0fr] opacity-0'
                   }`}>
-                    <Plus className="h-4 w-4" strokeWidth={2.5} />
-                  </div>
-                </button>
-
-                {/* Buttery-smooth expanding CSS grid row */}
-                <div className={`grid transition-all duration-300 ease-in-out ${
-                  isOpen ? 'grid-rows-[1fr] opacity-100 mb-5' : 'grid-rows-[0fr] opacity-0'
-                }`}>
-                  <div className="overflow-hidden">
-                    <p className="font-body text-xs md:text-sm text-neutral-700 leading-relaxed pl-1 pr-6 pb-2">
-                      {faq.a}
-                    </p>
+                    <div className="overflow-hidden">
+                      <p className="font-body text-xs md:text-sm text-neutral-700 leading-relaxed pl-1 pr-6 pb-2">
+                        {faq.a}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </AnimateSection>
-      </div>
-    </section>
+              );
+            })}
+          </AnimateSection>
+        </div>
+      </section>
+    </>
   );
 }
