@@ -4,13 +4,14 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import christianImg from '../image/christian.jpg';
 import juneImg from '../image/june.jpg';
 import florenceImg from '../image/florence.jpg';
+import regilImg from '../image/regil.jpg';
 import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 const members = [
   {
     name: 'Christian John Teofilo',
-    role: 'Full-Stack Developer',
-    bio: 'Architects core systems and coordinates full-stack engineering, turning complex requirements into seamless digital products.',
+    role: 'DevOps / Backend Developer',
+    bio: 'Builds scalable backend services, manages cloud infrastructure, and ensures seamless deployments across all production environments.',
     avatarBg: 'bg-editorial-red',
     photo: christianImg,
     github: 'https://github.com',
@@ -29,8 +30,8 @@ const members = [
   },
   {
     name: 'Florence Cris Solayao',
-    role: 'Backend Developer',
-    bio: 'Structures servers, maintains cloud deployments, configures APIs, and secures core backend data pipelines.',
+    role: 'Lead / Backend Developer',
+    bio: 'Leads the development team, architects backend systems, designs APIs, manages databases, and ensures code quality across all projects.',
     avatarBg: 'bg-editorial-violet',
     photo: florenceImg,
     github: 'https://github.com',
@@ -46,6 +47,16 @@ const members = [
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
     email: 'mailto:johnrey@magnetsolutions.dev',
+  },
+  {
+    name: 'Regil Tagalogon',
+    role: 'Full Stack Developer',
+    bio: 'Develops end-to-end web solutions, bridging frontend interfaces with robust backend systems to deliver seamless digital experiences.',
+    avatarBg: 'bg-editorial-blue',
+    photo: regilImg,
+    github: 'https://github.com',
+    linkedin: 'https://linkedin.com',
+    email: 'mailto:regil@magnetsolutions.dev',
   },
 ];
 
@@ -65,15 +76,15 @@ export default function Team() {
               [ SECTION 04: AGENCY STAFF DIRECTORY ]
             </span>
             <h3 className="font-serif font-black text-4xl md:text-5xl uppercase tracking-tight text-ink">
-              MEET THE ENGINEERS
+              MEET THE DEVELOPERS
             </h3>
             <p className="font-body text-neutral-600 mt-2 max-w-xl">
-              Four distinct minds operating synchronously in Caraga to deliver high-octane digital experiences.
+              Five distinct minds operating synchronously in Caraga to deliver high-octane digital experiences.
             </p>
           </div>
         </AnimateSection>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {members.map((member) => (
             <StaggerItem key={member.name}>
             <div
