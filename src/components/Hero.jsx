@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Sparkles, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimateSection } from './AnimateSection';
+import magnetImg from '../MagNet.png';
 
 export default function Hero() {
   return (
@@ -82,26 +83,18 @@ export default function Hero() {
             {/* Primary Grayscale image frame (vintage newsprint illustration look) */}
             <div className="relative border-4 border-ink bg-paper p-3 shadow-hard-lg hover:rotate-1 hover:scale-105 transition-all duration-300 z-10 w-4/5 max-w-sm">
               {/* Halftone dot texture */}
-              <div className="relative aspect-[4/3] border border-ink overflow-hidden bg-neutral-200 group">
-                <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] opacity-20 [background-size:12px_12px] z-10 pointer-events-none" />
+              <div className="relative aspect-square border border-ink overflow-hidden bg-white group flex items-center justify-center p-4">
+                <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] opacity-10 [background-size:12px_12px] z-10 pointer-events-none" />
 
-                {/* Grayscale to Sepia Vector Graphic using SVG */}
-                <svg viewBox="0 0 400 300" className="w-full h-full grayscale hover:grayscale-0 hover:sepia-[50%] transition-all duration-300 object-cover bg-cream">
-                  {/* Visual grid in SVG */}
-                  <line x1="0" y1="150" x2="400" y2="150" stroke="#111111" strokeWidth="2" strokeDasharray="5,5" />
-                  <line x1="200" y1="0" x2="200" y2="300" stroke="#111111" strokeWidth="2" strokeDasharray="5,5" />
-
-                  {/* Geometric artwork representing "Building Together" */}
-                  <polygon points="50,220 200,60 350,220" fill="none" stroke="#111111" strokeWidth="8" />
-                  <circle cx="200" cy="160" r="45" className="fill-editorial-violet" stroke="#111111" strokeWidth="4" />
-                  <rect x="120" y="220" width="160" height="80" className="fill-editorial-green" stroke="#111111" strokeWidth="4" />
-                  <circle cx="90" cy="90" r="25" className="fill-editorial-red" stroke="#111111" strokeWidth="4" />
-                  <polygon points="320,60 370,120 300,140" className="fill-editorial-yellow" stroke="#111111" strokeWidth="4" />
-                </svg>
+                <img
+                  src={magnetImg}
+                  alt="MagNet Solutions"
+                  className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
               </div>
 
               <div className="mt-3 font-mono text-[10px] tracking-wider text-center text-neutral-600 uppercase">
-                Fig 1.1 — Caraga-based developers engineering digital platforms.
+                Fig 1.1 — MagNet.png
               </div>
             </div>
           </AnimateSection>

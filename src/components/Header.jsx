@@ -76,7 +76,7 @@ export default function Header() {
             THE MagNET SOLUTIONS GLOBE
           </h1>
           <p className="font-serif italic text-sm md:text-base mt-2 text-neutral-600">
-            "Your customers are always online. Your business should be too."
+            "Attracting customers to your business, online."
           </p>
         </div>
 

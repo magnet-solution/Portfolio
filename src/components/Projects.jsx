@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ExternalLink, Code } from 'lucide-react';
 import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
+import o2MackDriveImg from '../projects/O2MackDrive.png';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -63,6 +64,17 @@ export default function Projects() {
       liveUrl: 'https://example.com',
       codeUrl: 'https://github.com',
       figNum: 'Fig 2.5 — Farm logistics ordering panel'
+    },
+    {
+      id: 6,
+      title: 'O2MackDrive',
+      category: 'websites',
+      desc: 'A clean car trading platform in Metro Manila featuring real inventory, trade-in services, and a no-pressure browsing experience for SUVs, sedans, and pickups.',
+      tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+      liveUrl: 'https://o2mackdrive-branding-gamma.vercel.app/',
+      codeUrl: 'https://github.com',
+      figNum: 'Fig 2.6 — O2MackDrive car trading homepage',
+      image: o2MackDriveImg
     }
   ];
 
@@ -71,6 +83,7 @@ export default function Projects() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
+
     <>
       <Helmet>
         <title>Portfolio | MagNet Solutions - Web Developer Caraga</title>
