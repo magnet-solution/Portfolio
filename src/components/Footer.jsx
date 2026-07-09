@@ -28,7 +28,7 @@ export default function Footer() {
               PUBLICATION STATEMENT
             </h4>
             <p className="font-body text-xs md:text-sm text-neutral-600 leading-relaxed text-justify-columns">
-              MagNet Solutions operates as a dedicated four-person web engineering agency based in Magallanes, Agusan del Norte, Caraga, Philippines. We reject complex, proprietary CMS systems and generic templates in favor of direct code ownership, clean search engine optimization, and robust visual design structures.
+              MagNet Solutions operates as a dedicated web developer agency based in Magallanes, Agusan del Norte, Caraga, Philippines. We reject complex, proprietary CMS systems and generic templates in favor of direct code ownership, clean search engine optimization, and robust visual design structures.
             </p>
           </div>
 

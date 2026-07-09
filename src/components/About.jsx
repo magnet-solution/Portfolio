@@ -39,7 +39,7 @@ export default function About() {
     <>
       <Helmet>
         <title>About MagNet Solutions | Web Developer Philippines</title>
-        <meta name="description" content="Learn about MagNet Solutions, a 4-person web developer and web designer agency based in Agusan del Norte, Caraga, Philippines. Reliable, affordable, and modern." />
+        <meta name="description" content="Learn about MagNet Solutions, a web developer and web designer agency based in Agusan del Norte, Caraga, Philippines. Reliable, affordable, and modern." />
         <meta property="og:title" content="About MagNet Solutions | Web Developer Philippines" />
         <meta property="og:description" content="Web developer and web designer agency based in Agusan del Norte, Caraga, Philippines. Reliable, affordable, and modern." />
       </Helmet>
@@ -52,7 +52,7 @@ export default function About() {
                 [ SECTION 02: THE LEAD STORY ]
               </span>
               <h3 className="font-serif font-black text-3xl sm:text-4xl md:text-5xl leading-tight text-ink mb-6">
-                A 4-Person Digital Guild Solving Complex Online Operations.
+                A Digital Guild Solving Complex Online Operations.
               </h3>
               
               <div className="font-body text-neutral-800 text-sm md:text-base leading-relaxed text-justify-columns space-y-4">
