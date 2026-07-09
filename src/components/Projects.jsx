@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ExternalLink, Code } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 import o2MackDriveImg from '../projects/O2MackDrive.png';
+import etoileSauvageImg from '../projects/L\'Étoile Sauvage.png';
+import magCareImg from '../projects/MagCare.png';
+import laUnionImg from '../projects/launion.png';
+import fbsImg from '../projects/fbs.png';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -16,65 +20,54 @@ export default function Projects() {
 
   const projects = [
     {
-      id: 1,
-      title: 'Butuan Booking Portal',
-      category: 'webapps',
-      desc: 'A reservation system for corporate business travel and hotel rooms in Caraga. Features real-time occupancy blocks and automated SMS booking invoices.',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Framer Motion'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com',
-      figNum: 'Fig 2.1 — Live data reservation engine'
-    },
-    {
-      id: 2,
-      title: 'Surigao Pearl E-Shop',
-      category: 'ecommerce',
-      desc: 'Custom boutique store processing pearl jewelry sales. Integrates credit card, GCash, and PayMaya payments with structured invoice exports.',
-      tech: ['Laravel', 'MySQL', 'Tailwind CSS', 'PayMaya API'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com',
-      figNum: 'Fig 2.2 — Secure shopping checkout view'
-    },
-    {
-      id: 3,
-      title: 'Agusan Woodcraft Hub',
-      category: 'websites',
-      desc: 'An editorial-style online catalogue for local mahogany woodcarving artisans. Focused heavily on high-speed image loading and typography hierarchy.',
-      tech: ['React', 'Vite', 'Vanilla CSS', 'Lucide Icons'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com',
-      figNum: 'Fig 2.3 — Portfolio catalog page grid'
-    },
-    {
-      id: 4,
-      title: 'Siargao Surf Lessons',
-      category: 'webapps',
-      desc: 'Booking calendar and instructor scheduling portal for surf guides. Features local weather alerts and automated scheduling grids.',
-      tech: ['Django', 'React', 'Tailwind CSS', 'PostgreSQL'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com',
-      figNum: 'Fig 2.4 — Mobile-first booking dashboard'
-    },
-    {
-      id: 5,
-      title: 'Caraga Fresh Market',
-      category: 'ecommerce',
-      desc: 'A digital marketplace for local farming cooperatives, connecting vendors directly to residential consumers. Built for extreme mobile efficiency.',
-      tech: ['React', 'Vite', 'Laravel', 'MySQL'],
-      liveUrl: 'https://example.com',
-      codeUrl: 'https://github.com',
-      figNum: 'Fig 2.5 — Farm logistics ordering panel'
-    },
-    {
       id: 6,
       title: 'O2MackDrive',
       category: 'websites',
       desc: 'A clean car trading platform in Metro Manila featuring real inventory, trade-in services, and a no-pressure browsing experience for SUVs, sedans, and pickups.',
       tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
       liveUrl: 'https://o2mackdrive-branding-gamma.vercel.app/',
-      codeUrl: 'https://github.com',
       figNum: 'Fig 2.6 — O2MackDrive car trading homepage',
       image: o2MackDriveImg
+    },
+    {
+      id: 7,
+      title: "L'Étoile Sauvage",
+      category: 'websites',
+      desc: 'A French-inspired dining experience brought to life with an elegant restaurant website showcasing seasonal menus, ambiance, and reservation details.',
+      tech: ['React', 'Node.js', 'Render', 'Framer Motion'],
+      liveUrl: 'https://restaurant-760u.onrender.com/',
+      figNum: 'Fig 2.7 — Fine dining website homepage',
+      image: etoileSauvageImg
+    },
+    {
+      id: 8,
+      title: 'MagCare',
+      category: 'webapps',
+      desc: 'A seamless clinic appointment scheduling system allowing patients to book, reschedule, and manage visits online with real-time availability.',
+      tech: ['React', 'Node.js', 'Vercel', 'Tailwind CSS'],
+      liveUrl: 'https://clinic-appointment-pearl.vercel.app/request',
+      figNum: 'Fig 2.8 — Clinic appointment request portal',
+      image: magCareImg
+    },
+    {
+      id: 9,
+      title: 'La Union',
+      category: 'webapps',
+      desc: 'A document request management system for La Union Senior High School where students can submit and track document requests online, while staff and administrators handle processing, pickup scheduling, and document digitization.',
+      tech: ['React', 'Vite', 'Tailwind CSS', 'Vercel'],
+      liveUrl: 'https://mars-launion.vercel.app/',
+      figNum: 'Fig 2.9 — La Union travel guide homepage',
+      image: laUnionImg
+    },
+    {
+      id: 10,
+      title: 'Flight Booking Simulation Platform',
+      category: 'webapps',
+      desc: 'A comprehensive smart flight booking simulation platform for CTHM-CSUCC featuring flight search with multi-step booking wizard, interactive seat maps, add-on selection, PDF itinerary and QR-coded boarding pass generation, DCS check-in simulation, ML-powered dynamic pricing, student and instructor portals, and an admin panel.',
+      tech: ['Django', 'Python', 'PostgreSQL', 'ML', 'Vercel'],
+      liveUrl: 'https://flight-booking-django.vercel.app/login',
+      figNum: 'Fig 2.10 — Flight booking system login',
+      image: fbsImg
     }
   ];
 
@@ -137,31 +130,38 @@ export default function Projects() {
                 <div className="border border-ink bg-neutral-200 aspect-[16/10] overflow-hidden relative mb-4">
                   <div className="absolute inset-0 bg-[radial-gradient(#111111_1px,transparent_1px)] opacity-20 [background-size:12px_12px] z-10 pointer-events-none" />
                   
-                  {/* SVG Visual Representation of the Project */}
-                  <svg viewBox="0 0 400 250" className="w-full h-full grayscale hover:grayscale-0 hover:sepia-[50%] transition-all duration-300 object-cover bg-cream">
-                    <rect width="400" height="250" fill="none" stroke="#111111" strokeWidth="4" />
-                    <line x1="20" y1="40" x2="380" y2="40" stroke="#111111" strokeWidth="2" />
-                    <circle cx="35" cy="20" r="5" fill="#111111" />
-                    <circle cx="50" cy="20" r="5" fill="#111111" />
-                    <circle cx="65" cy="20" r="5" fill="#111111" />
-                    
-                    {/* Category Accent Shape */}
-                    {project.category === 'webapps' && (
-                      <polygon points="120,80 280,80 200,210" className="fill-editorial-violet opacity-30" stroke="#111111" strokeWidth="2" />
-                    )}
-                    {project.category === 'ecommerce' && (
-                      <rect x="130" y="80" width="140" height="110" className="fill-editorial-green opacity-30" stroke="#111111" strokeWidth="2" />
-                    )}
-                    {project.category === 'websites' && (
-                      <circle cx="200" cy="140" r="60" className="fill-editorial-pink opacity-30" stroke="#111111" strokeWidth="2" />
-                    )}
-                    
-                    {/* Schematic text bars */}
-                    <rect x="50" y="100" width="300" height="12" fill="#111111" opacity="0.8" />
-                    <rect x="50" y="125" width="220" height="8" fill="#111111" opacity="0.5" />
-                    <rect x="50" y="145" width="280" height="8" fill="#111111" opacity="0.5" />
-                    <rect x="50" y="165" width="180" height="8" fill="#111111" opacity="0.5" />
-                  </svg>
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  ) : (
+                    <svg viewBox="0 0 400 250" className="w-full h-full grayscale hover:grayscale-0 hover:sepia-[50%] transition-all duration-300 object-cover bg-cream">
+                      <rect width="400" height="250" fill="none" stroke="#111111" strokeWidth="4" />
+                      <line x1="20" y1="40" x2="380" y2="40" stroke="#111111" strokeWidth="2" />
+                      <circle cx="35" cy="20" r="5" fill="#111111" />
+                      <circle cx="50" cy="20" r="5" fill="#111111" />
+                      <circle cx="65" cy="20" r="5" fill="#111111" />
+                      
+                      {/* Category Accent Shape */}
+                      {project.category === 'webapps' && (
+                        <polygon points="120,80 280,80 200,210" className="fill-editorial-violet opacity-30" stroke="#111111" strokeWidth="2" />
+                      )}
+                      {project.category === 'ecommerce' && (
+                        <rect x="130" y="80" width="140" height="110" className="fill-editorial-green opacity-30" stroke="#111111" strokeWidth="2" />
+                      )}
+                      {project.category === 'websites' && (
+                        <circle cx="200" cy="140" r="60" className="fill-editorial-pink opacity-30" stroke="#111111" strokeWidth="2" />
+                      )}
+                      
+                      {/* Schematic text bars */}
+                      <rect x="50" y="100" width="300" height="12" fill="#111111" opacity="0.8" />
+                      <rect x="50" y="125" width="220" height="8" fill="#111111" opacity="0.5" />
+                      <rect x="50" y="145" width="280" height="8" fill="#111111" opacity="0.5" />
+                      <rect x="50" y="165" width="180" height="8" fill="#111111" opacity="0.5" />
+                    </svg>
+                  )}
                 </div>
 
                 {/* Mono Caption */}
@@ -192,25 +192,15 @@ export default function Projects() {
                 </div>
 
                 {/* Row CTAs */}
-                <div className="grid grid-cols-2 gap-4 border-t border-ink pt-4">
+                <div className="border-t border-ink pt-4">
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="py-2.5 border border-ink bg-transparent text-ink text-center font-sans font-bold text-[10px] tracking-wider uppercase flex items-center justify-center gap-1.5 hover:bg-editorial-yellow transition-colors select-none"
+                    className="w-full block py-2.5 border border-ink bg-transparent text-ink text-center font-sans font-bold text-[10px] tracking-wider uppercase flex items-center justify-center gap-1.5 hover:bg-editorial-yellow transition-colors select-none"
                   >
                     <ExternalLink className="h-3.5 w-3.5" />
                     <span>View Live</span>
-                  </a>
-                  
-                  <a
-                    href={project.codeUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="py-2.5 border border-ink bg-ink text-paper text-center font-sans font-bold text-[10px] tracking-wider uppercase flex items-center justify-center gap-1.5 hover:bg-white hover:text-ink hover:border-ink transition-all select-none"
-                  >
-                    <Code className="h-3.5 w-3.5" />
-                    <span>View Code</span>
                   </a>
                 </div>
               </div>
