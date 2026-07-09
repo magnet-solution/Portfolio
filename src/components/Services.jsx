@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Monitor, ShoppingBag, Code2, CalendarRange, Sparkles, Settings } from 'lucide-react';
+import { Monitor, ShoppingBag, Code2, CalendarRange, Sparkles, Settings, GraduationCap } from 'lucide-react';
 import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection';
 
 export default function Services() {
@@ -46,6 +46,13 @@ export default function Services() {
       description: 'Monthly checks, plugin updates, text edits, backup monitoring, security scanning, and page performance fine-tuning.',
       icon: Settings,
       color: 'hover:bg-neutral-300'
+    },
+    {
+      num: '07',
+      title: 'School Project',
+      description: 'Capstone projects, thesis portals, enrollment systems, and academic platforms built for students and educational institutions.',
+      icon: GraduationCap,
+      color: 'hover:bg-editorial-yellow'
     }
   ];
 

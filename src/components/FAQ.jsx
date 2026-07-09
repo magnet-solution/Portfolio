@@ -26,6 +26,10 @@ export default function FAQ() {
     {
       q: 'Do you provide website maintenance?',
       a: 'Yes, we offer ongoing maintenance and update support plans starting at ₱1,500/month to handle backups, security audits, software updates, and minor text/image modifications.'
+    },
+    {
+      q: 'Is the domain name for our website free?',
+      a: 'Domain registration is not included in our development packages. You may purchase a domain name through registrars like GoDaddy or Namecheap. We can assist you with domain setup and configuration at no additional labor cost.'
     }
   ];
 

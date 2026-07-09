@@ -7,6 +7,23 @@ import { AnimateSection, StaggerContainer, StaggerItem } from './AnimateSection'
 export default function Pricing() {
   const tiers = [
     {
+      name: 'Student Package',
+      price: 'Negotiable',
+      description: 'For students and fresh graduates building academic or personal projects. Let us discuss a fair arrangement.',
+      features: [
+        'Up to 3 pages',
+        'Mobile responsive design',
+        'Basic contact form',
+        'Student-friendly terms',
+        'Flexible payment options',
+        'Mentorship included'
+      ],
+      cta: 'Inquire Now',
+      accentColor: 'border-ink',
+      badgeColor: 'bg-editorial-violet text-paper',
+      isPopular: false
+    },
+    {
       name: 'Starter Package',
       price: '₱8,000 - ₱15,000',
       description: 'Ideal for local businesses, portfolios, and landing pages looking to establish their initial web presence.',
@@ -43,7 +60,7 @@ export default function Pricing() {
     },
     {
       name: 'Premium Solution',
-      price: '₱50,000 - ₱100,000',
+      price: '₱50,000 - ₱80,000',
       description: 'Built for enterprise actions, scheduling services, e-commerce checkouts, and fully custom workflows.',
       features: [
         'Unlimited custom pages',
@@ -84,7 +101,7 @@ export default function Pricing() {
           </div>
         </AnimateSection>
 
-        <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-12">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch mb-12">
           {tiers.map((tier) => (
             <StaggerItem key={tier.name}>
             <div

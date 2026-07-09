@@ -31,12 +31,10 @@ export default function Layout() {
         )}
 
         <a
-          href="https://m.me/61591696464731"
-          target="_blank"
-          rel="noreferrer"
+          href="mailto:magnet.solutionsph@gmail.com"
           className="w-14 h-14 bg-editorial-red text-paper border-2 border-ink flex items-center justify-center transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-hard shadow-hard-sm active:translate-x-1 active:translate-y-1 active:shadow-none"
-          title="Chat with our team"
-          aria-label="Open Messenger chat"
+          title="Email our team"
+          aria-label="Send us an email"
         >
           <MessageSquare className="h-6 w-6 text-paper" strokeWidth={2.5} />
         </a>

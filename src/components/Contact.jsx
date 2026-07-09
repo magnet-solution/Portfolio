@@ -17,7 +17,7 @@ export default function Contact() {
   const budgets = [
     { label: '₱8,000 - ₱15,000 (Starter)', value: 'starter' },
     { label: '₱20,000 - ₱40,000 (Business)', value: 'business' },
-    { label: '₱50,000 - ₱100,000 (Premium)', value: 'premium' },
+    { label: '₱50,000 - ₱80,000 (Premium)', value: 'premium' },
     { label: '₱1,500/mo (Maintenance only)', value: 'maintenance' },
     { label: 'Custom Scope / Unsure', value: 'custom' }
   ];
@@ -45,12 +45,23 @@ export default function Contact() {
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      setSubmitted(true);
-      setFormData({ name: '', email: '', phone: '', budget: '', desc: '' });
-      setTimeout(() => setSubmitted(false), 5000);
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/magnet.solutionsph@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        if (res.ok) {
+          setSubmitted(true);
+          setFormData({ name: '', email: '', phone: '', budget: '', desc: '' });
+          setTimeout(() => setSubmitted(false), 5000);
+        }
+      } catch (err) {
+        console.error('Form submission error:', err);
+      }
     }
   };
 

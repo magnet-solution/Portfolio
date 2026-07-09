@@ -45,7 +45,7 @@ export default function Projects() {
       category: 'webapps',
       desc: 'A seamless clinic appointment scheduling system allowing patients to book, reschedule, and manage visits online with real-time availability.',
       tech: ['React', 'Node.js', 'Vercel', 'Tailwind CSS'],
-      liveUrl: 'https://clinic-appointment-pearl.vercel.app/request',
+      liveUrl: 'https://clinic-appointment-pearl.vercel.app/',
       figNum: 'Fig 2.8 — Clinic appointment request portal',
       image: magCareImg
     },
