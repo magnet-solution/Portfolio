@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://magnet-solution.vercel.app/sitemap.xml

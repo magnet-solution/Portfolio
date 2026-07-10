@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://magnet-solution.vercel.app/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/about/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/services/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/team/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/projects/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/pricing/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/process/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/faq/</loc>
+    </url>
+    <url>
+        <loc>https://magnet-solution.vercel.app/contact/</loc>
+    </url>
+
+    <!-- add one <url> block per page, e.g. /services, /contact -->
+</urlset>
