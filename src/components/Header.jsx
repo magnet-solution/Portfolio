@@ -72,7 +72,7 @@ export default function Header() {
 
         {/* Main Nameplate (Masthead) */}
         <div className="max-w-screen-xl mx-auto px-4 py-6 text-center border-b border-ink md:py-8">
-          <h1 className="font-serif font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight select-none">
+          <h1 className="font-serif text-red-500 text-3xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight select-none">
             Attracting customers to your business, online.
           </h1>
         </div>
