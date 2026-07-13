@@ -14,7 +14,7 @@ export default function Hero() {
         <meta property="og:title" content="MagNet Solutions | Web Developer Agusan del Norte Caraga Philippines" />
         <meta property="og:description" content="Web developer and web designer in Agusan del Norte, Caraga, Philippines. We build fast, affordable websites, web apps, and e-commerce stores for local businesses." />
       </Helmet>
-      <section id="home" className="max-w-screen-xl mx-auto px-4 py-12 md:py-20 border-b border-ink">
+      <section id="home" className="max-w-screen-xl mx-auto px-4 py-12 space-y-5 md:py-20 border-b border-ink">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Side: Editorial Typography & Copy */}
           <div className="lg:col-span-7 flex flex-col justify-center">
@@ -26,7 +26,7 @@ export default function Hero() {
             </AnimateSection>
 
             <AnimateSection delay={0.1}>
-              <h2 className="font-serif font-black text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tighter text-ink mb-6">
+              <h2 className="font-serif font-black text-4xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[0.95] tracking-tighter text-ink mb-6">
                 We build websites <br className="hidden md:inline"/>
                 &amp; web apps for <br className="hidden md:inline"/>
                 <span className="underline decoration-editorial-red decoration-wavy underline-offset-8">businesses.</span>
@@ -34,9 +34,9 @@ export default function Hero() {
             </AnimateSection>
 
             <AnimateSection delay={0.2}>
-              <p className="font-body text-base md:text-xl leading-relaxed text-neutral-800 text-justify-columns max-w-2xl mb-8">
+              <p className="font-body mt-3 text-base md:text-based leading-relaxed text-neutral-800 text-justify-columns max-w-2xl mb-8">
                 <span className="float-left text-7xl font-serif font-black text-editorial-red mr-3 mt-1 leading-[0.8] select-none">Y</span>
-                our customers are always online. Your business should be too. We are a specialized four-person team based in Magallanes, Agusan del Norte, Caraga, Philippines — forging robust frontend layouts, high-scale database systems, and engaging interactive templates. Sharp, lightning-fast, and custom-tuned to grow your revenue.
+                our customers are always online. Your business should be too. We are a specialized team based in Magallanes, Agusan del Norte, Caraga, Philippines — forging robust frontend layouts, high-scale database systems, and engaging interactive templates. Sharp, lightning-fast, and custom-tuned to grow your revenue.
               </p>
             </AnimateSection>
 
